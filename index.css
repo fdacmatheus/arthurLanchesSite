@@ -1,0 +1,257 @@
+/* Estilização da logo */
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth; 
+}
+
+.caixa {
+  overflow: hidden;
+  position: relative;
+}
+
+#pizzaGrande {
+  position: absolute;
+}
+
+
+
+.logo-header{
+    width: 300px;
+}
+
+.stickyHeader{
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.main-section {
+  height: 100vh;
+  background-image: url('img/elementoBgMain.svg');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.content {
+  padding: 50px;
+}
+
+.badge-arthurlanches{
+  background: rgba(255, 194, 102, 0.4);
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  padding: 8px 24px;
+  border-radius: 16px;
+}
+.badge-arthurlanches img {
+  margin-left: 8px;
+}
+
+.tituloPrincipal {
+  margin-top: 16px;
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 52px;
+}
+
+.botao-principal {
+  background-color: #FF9F0D;
+  padding: 16px 64px;
+  border-radius: 32px;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+
+.tituloSecundario {
+  margin-top: 16px;
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 52px;
+}
+.second-section{
+  padding: 3rem;
+}
+.efeitoMarcaTexto {
+  z-index: 1;
+  position: relative;
+}
+
+.efeitoMarcaTexto::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background-color: #A9CC66;
+  width: 100%;
+  height: 30%;
+}
+
+.paragrafo-historia {
+  margin-top: 32px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.iconeCardLocalizacao {
+  height: 200px
+}
+
+.card-padrao {
+  border: none;
+  box-shadow: 0px 2px 9.5px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  padding: 32px 16px;
+}
+
+.third-section{
+  height: 60vh;
+  margin: 40px 0px;
+}
+
+.efeitoMarcaTextoVermelho {
+  z-index: 1;
+  position: relative;
+}
+.efeitoMarcaTextoVermelho::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background-color: #FFC266;
+  width: 100%;
+  height: 30%;
+}
+
+.tituloPizzas {
+  margin-top: 16px;
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 52px;
+  margin-bottom: 32px;
+}
+
+.titulo-card-pizza {
+  font-family: 'Berkshire Swash', cursive;
+}
+
+.card-padrao-pizza{
+  box-shadow: 0px 2px 9.5px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  border: none;
+  padding-bottom: 16px;
+}
+
+footer {
+  background-color: #FF9F0D;
+  color: #2E3125;
+}
+
+footer a {
+  color: #2E3125;
+}
+footer a:hover {
+  color: #2E3125;
+}
+
+footer h5 {
+  font-family: 'Berkshire Swash', cursive;
+}
+
+.lista-footer li{
+  margin: 16px 0px;
+}
+
+.rodape2 {
+  background-color: #B27312;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 767px) {
+
+  .main-section {
+    height: 100vh;
+  }
+  .pizza {
+    width: 80%;
+  }
+  .second-section {
+    height: auto;
+  }
+  .third-section{
+    height: auto;
+  }
+  .navbar {
+    padding: 8px;
+  }
+
+  .logo-header {
+    height: 40px;
+  }
+
+  .main-section .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .main-section .tituloPrincipal {
+    font-size: 32px;
+  }
+
+  .main-section .botao-principal {
+    font-size: 14px;
+  }
+
+  .second-section .tituloSecundario {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .second-section .paragrafo-historia {
+    font-size: 14px;
+    text-align: center;
+  }
+  .imgPizzaGrande {
+    width: 100%;
+  }
+
+  .third-section .card-padrao {
+    margin-bottom: 20px;
+  }
+
+  .third-section .card-body {
+    padding: 15px;
+  }
+
+  .third-section .card-title {
+    font-size: 18px;
+  }
+
+  .third-section .card-text {
+    font-size: 14px;
+  }
+
+  #app .tituloSecundario {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  #app .card-padrao-pizza {
+    margin-bottom: 20px;
+  }
+
+  #app .card-title {
+    font-size: 18px;
+  }
+
+  #app .card-text {
+    font-size: 14px;
+  }
+
+  .footer .col-lg-4 {
+    margin-bottom: 30px;
+  }
+}

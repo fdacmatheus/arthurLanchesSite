@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <title>Arthur Lanches</title>
+</head>
+<body>
+
+  <nav id="header" class="navbar navbar-expand-lg navbar-light fixed-top py-4">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img class="logo-header" src="img/logoArthurLanches.svg " height="50">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#home">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#historia">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#app">Cardápio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://api.whatsapp.com/send?phone=5598987678220">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="main-section d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="content">
+            <span class="badge badge-arthurlanches">
+              Fazemos delivery em toda São Luís
+              <img src="img/delivery.svg" alt="">
+            </span>
+            <h1 class="tituloPrincipal">Pizzas artesanais e suculentas feitas no forno à lenha.</h1>
+            <button type="button" class="mt-3 btn botao-principal" href="#app">
+              Comprar
+              <img src="img/iconeCompra.svg" alt="">
+            </button>
+          </div>
+        </div>
+        <div id="caixa" class="col-lg-6">
+          <img id="pizzaGrande" class="pizza" src="img/pizzaGrande.png" alt="Imagem">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="historia" class="second-section d-flex align-items-center">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h2 class="tituloSecundario">Nossa <span class="efeitoMarcaTexto tituloSecundario">História</span></h2>
+          <p class="paragrafo-historia">Arthur Lanches era uma pizzaria familiar que ficava em uma pequena cidade do interior de São Luís. <br>
+          A sua especialidade era a pizza de massa fina e crocante, com uma grande variedade de ingredientes frescos e saborosos.<Br>
+          O fundador da pizzaria, Arthur, era um senhor muito simpático e conhecido por todos na cidade. Ele e sua esposa, Maria, trabalhavam juntos na pizzaria, e os clientes sempre eram recebidos com um sorriso caloroso e um atendimento excepcional. <Br>
+          A pizza da Arthur Lanches tornou-se tão popular na cidade que muitas vezes era difícil conseguir uma mesa livre durante o final de semana.</p>
+          </div>
+          <div class="col-lg-5">
+          <img class="imgPizzaGrande" src="img/imagem-pizza.png" alt="">
+          </div>
+          </div>
+          </div>
+          </section><section class="third-section d-flex align-items-center">
+            <div class="container">
+              <div class="card-deck">
+                <div class="card card-padrao">
+                  <img src="img/iconeLocalizaçãoVerde.svg" class="iconeCardLocalizacao pt-2" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Estamos localizados em:</h5>
+                    <p class="card-text text-center">Av. Cel. Colares Moreira, 443 - Jardim Renascença, São Luís - MA, 65075-441</p>
+                  </div>
+                </div>
+                <div class="card card-padrao">
+                  <img src="img/iconeHorarioVerde.svg" class="iconeCardLocalizacao pt-2" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Funcionamos no Horário::</h5>
+                    <p class="card-text text-center">de Seg a Sexta | 18h às 23h</p>
+                  </div>
+                </div>
+                <div class="card card-padrao">
+                  <img src="img/iconeWhatsappVerde.svg" class="iconeCardLocalizacao pt-2" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Nosso número de atendimento:</h5>
+                    <p class="card-text text-center">(98) 9 8767-8220</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <div id="app">
+            <div class="container fourth-section mb-5">
+              <h2 class="tituloSecundario text-center mb-5">Compre sua pizza  <span class="efeitoMarcaTexto tituloSecundario">aqui</span></h2>
+              <div class="row">
+                <div class="col-md-4" v-for="produto in produtos" :key="produto.id">
+                  <div class="card card-padrao-pizza">
+                    <img :src="'http://localhost:3000/uploads/' + produto.imagem" class="card-img-top" alt="Imagem do Produto">
+                    <div class="card-body">
+                      <h5 class="card-title titulo-card-pizza">{{ produto.nome }}</h5>
+                      <p class="card-text">{{ produto.descricao }}</p>
+                     
+                      <p class="card-text">Preço: R$ <strong>{{ produto.preco }}</strong></p>
+                     <a class="botao-principal btn" href="https://api.whatsapp.com/send?phone=5598987678220"> <img class="mr-1" src="img/iconeCompra.svg" alt=""> Comprar </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <footer>
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-4">
+            <h5 class="mb-3">Mapa do Site</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Sobre</a></li>
+              <li><a href="#">Cardápio</a></li>
+              <li><a href="#">Contato</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h5 class="mb-3">Fale Conosco</h5>
+            <ul class="list-unstyled lista-footer">
+              <li><img src="img/localizacao.svg"  class="mr-2" alt=""> Av. Cel. Colares Moreira, 443 - Jardim Renascença, São Luís - MA, 65075-441 </li>
+              <li><img src="img/relogio.svg" class="mr-2" alt=""> de Seg a Sexta | 18h às 23h </li>
+              <li><img src="img/telefone.svg" class="mr-2" alt=""> (98) 9 8767-8220 </li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h5 class="mb-3">Sabores de Pizza</h5>
+            <ul class="list-unstyled">
+              <li>Margherita</li>
+              <li>Calabresa</li>
+              <li>Quatro Queijos</li>
+              <li>Portuguesa</li>
+              <li>Frango com Catupiry</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p>&copy; Arthur Lanches - Todos os direitos reservados</p>
+          </div>
+          <div class="col-md-6 text-md-right">
+            <p>Desenvolvido por: Doju Company</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+    <script>
+      var pizzaGrande = document.getElementById("pizzaGrande");
+
+// Adiciona um evento de movimento do mouse ao elemento "caixa"
+  document.getElementById("caixa").addEventListener("mousemove", function(event) {
+        // Obtém a posição horizontal relativa dentro da caixa
+        var relX = event.clientX - this.offsetLeft;
+
+        // Obtém a posição vertical relativa dentro da caixa
+        var relY = event.clientY - this.offsetTop;
+
+        // Calcula o deslocamento da imagem da pizza
+        var offsetX = (relX - this.offsetWidth / 2) / 20;
+        var offsetY = (relY - this.offsetHeight / 2) / 20;
+
+        // Aplica o deslocamento à posição da imagem da pizza
+        pizzaGrande.style.transform = "translate(" + offsetX + "px, " + offsetY + "px)";
+  });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      new Vue({
+        el: '#app',
+        data: {
+          produtos: []
+        },
+        mounted() {
+          this.carregarProdutos();
+        },
+        methods: {
+          carregarProdutos() {
+            axios.get('http://localhost:3000/produtos')
+              .then(response => {
+                this.produtos = response.data.produtos;
+              })
+              .catch(error => {
+                console.error(error);
+              });
+          }
+        }
+      });
+    </script>
+    <script>
+          window.onscroll = function() {
+      // Seleciona o elemento do header
+      var header = document.getElementById("header")
+
+      // Obtém a posição vertical atual da janela
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      // Verifica se a posição vertical é maior que 0
+      if (scrollTop > 0) {
+        // Adiciona a classe CSS para tornar o header sticky
+        header.classList.add('stickyHeader');
+      } else {
+        // Remove a classe CSS quando a posição vertical é igual a 0
+        header.classList.remove('stickyHeader');
+      }
+    };
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>    
