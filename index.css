@@ -1,10 +1,48 @@
-/* Estilização da logo */
-* {
-    font-family: 'Inter', sans-serif;
+
+
+:root {
+  scroll-behavior: smooth;  /* Adiciona um efeito suave ao scroll */
+  
+   /* Tamanhos de fonte para desktop */
+  --h1-font-size: 6rem;
+   --h2-font-size: 3.75rem;
+   --h3-font-size: 3rem;
+   
+   /* Tamanhos de fonte para dispositivos móveis */
+  --h1-font-size-mobile: 2.5rem;
+  --h2-font-size-mobile: 2rem;
+  --h3-font-size-mobile: 1.8rem;
+
+  --h1-color: rgba(255, 194, 102, 0.4);
+  --h1-font: 'Berkshire Swash', cursive;
+  --h1-font-family: 'Inter', sans-serif;
+  
+  --h2-color: #ffffff;
+  --h2-font: cursive;
+  --h2-font-family: 'Inter', sans-serif;
+  
+  --h3-color: #FF9F0D;
+  --h3-font: 'Berkshire Swash', cursive;
+  --h3-font-family: 'Inter', sans-serif;
+  
+  --h4-color: #B27312;
+  --h4-font: cursive;
+  --h4-font-family: 'Inter', sans-serif;
+  
+  --h5-color: #A9CC66;
+  --h5-font: 'Berkshire Swash', cursive;
+  --h5-font-family: 'Inter', sans-serif;
+  
+  --h6-color: #2E3125;
+  --h6-font: cursive;
+  --h6-font-family: 'Inter', sans-serif;
+
+  --sombra-padrao-cards: box-shadow: 0px 2px 9.5px rgba(0, 0, 0, 0.1);;
 }
 
-html {
-  scroll-behavior: smooth; 
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .caixa {
@@ -171,15 +209,50 @@ footer h5 {
 
 /* Estilos para dispositivos móveis */
 @media (max-width: 767px) {
-
+    /* Estilização banner principal */
   .main-section {
-    height: 100vh;
-  }
-  .pizza {
-    width: 80%;
-  }
-  .second-section {
     height: auto;
+    padding: 60px 0px;
+    background-position: bottom;
+    background-size: contain;
+
+  }
+  .main-section .tituloPrincipal {
+      font-size: var(--h1-font-size-mobile);
+      text-align: center;
+      padding: 0;
+      width: 100%;
+  }
+
+  .main-section .botao-principal {
+    font-size: 14px;
+  }
+  
+  .main-section .content{
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #pizzaGrande {
+    position: relative;
+    margin-top: 0;
+  }
+  /* Fim estilização banner principal */
+
+  /* Estilização seção historia */
+
+  .nossa-historia {
+    height: auto;
+    padding: 22px 0px;
+  }
+  .tituloSecundario {
+    text-align: center;
+  }
+  .paragrafo-historia {
+    padding: 8px;
+    text-align: center;
+    margin-bottom: 16px;
   }
   .third-section{
     height: auto;
@@ -192,18 +265,6 @@ footer h5 {
     height: 40px;
   }
 
-  .main-section .container {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-
-  .main-section .tituloPrincipal {
-    font-size: 32px;
-  }
-
-  .main-section .botao-principal {
-    font-size: 14px;
-  }
 
   .second-section .tituloSecundario {
     font-size: 40px;
